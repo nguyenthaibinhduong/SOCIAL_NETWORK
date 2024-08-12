@@ -58,7 +58,6 @@ const removeUser = (socketId) => {
 
 //SOCKET.IO API
 io.on('connection', (socket) => {
-    console.log('a user connected:', socket.id);
 
     socket.on("addUser", (userId) => {
     addUser(userId, socket.id);
@@ -66,7 +65,6 @@ io.on('connection', (socket) => {
     });
     socket.on('joinRoom', (roomId) => {
         socket.join(roomId);
-        console.log('joined:', roomId);
     });
 
     socket.on('sendMessage', (messageData) => {
@@ -75,7 +73,6 @@ io.on('connection', (socket) => {
     });
 
     socket.on('disconnect', () => {
-        console.log('user disconnected:', socket.id);
         removeUser(socket.id);
         io.emit("getUsers", users);
     });
@@ -112,4 +109,7 @@ app.get("*", (req, res) => {
 	res.send("<h1>Hello World API<h1>");
 });
 
-server.listen(process.env.PORT||8008);
+server.listen(process.env.PORT || 8008, () => {
+    console.log('Server listening on port '+ process.env.PORT);
+    
+});
