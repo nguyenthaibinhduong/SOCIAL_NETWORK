@@ -40,7 +40,7 @@ app.use(session({
 const server = http.createServer(app); // Tạo server HTTP từ express
 const io = new Server(server, {
     cors: {
-        origin: process.env.APP_ORIGIN_URL,
+        origin: process.env.CORS_URL,//
         methods: ['GET', 'POST'],
     },
 });
