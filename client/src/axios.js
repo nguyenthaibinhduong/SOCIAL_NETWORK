@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Tạo axios instance
 export const makeRequest = axios.create({
-  baseURL: 'http://localhost:8008/api',
+  baseURL: process.env.REACT_APP_API_URL+'/api',
   withCredentials: true, // Để gửi cookie với request
 });
 
