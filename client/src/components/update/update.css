@@ -1,0 +1,73 @@
+
+.update-box{
+    position: fixed;
+    z-index: 999;
+    top: 55vh;
+    left: 49vw;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    max-height: 80vh;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 36px -7px rgba(0,0,0,0.75);
+    overflow-y: auto;
+}
+.update-box::-webkit-scrollbar {
+    width: 8px; /* Chiều rộng của thanh cuộn */
+}
+
+.update-box::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Màu của thanh cuộn */
+    border-radius: 4px; /* Bo tròn góc của thanh cuộn */
+}
+
+.update-box::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* Màu của thanh cuộn khi hover */
+}
+
+.update-box::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Màu nền của track */
+    border-radius: 4px; /* Bo tròn góc của track */
+}
+
+/* Tùy chỉnh thanh cuộn cho Firefox */
+.update-box {
+    scrollbar-width: thin; /* Chiều rộng thanh cuộn */
+    scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1); /* Màu của thanh cuộn và track */
+}
+
+.update-box:hover {
+    scrollbar-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.1); /* Màu của thanh cuộn và track khi hover */
+}
+
+
+.update-box::-webkit-scrollbar {
+  width: 8px;
+  
+}
+
+
+.update-box:hover::-webkit-scrollbar {
+  width: 8px;
+}
+
+.update-box:hover::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+
+
+.update-box::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  
+}
+
+.update-box:hover::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #ccc; 
+}
+
+
+.update-box::-webkit-scrollbar-thumb:hover {
+  background: #ccc; 
+}

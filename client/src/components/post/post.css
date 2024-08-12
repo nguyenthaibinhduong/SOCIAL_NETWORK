@@ -1,0 +1,28 @@
+.icon{
+    font-weight: bolder;
+}
+.post-btn{
+    position: relative;
+}
+.menu-post{
+    position: absolute;
+    top:100;
+    right: 10px;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 36px -7px rgba(0,0,0,0.75);
+}
+.list-group-item:hover{
+    background-color: #3688fa;
+    color:#fff;
+}
+
+
+.text-name:hover{
+    color:#3688fa
+}
+.like-list:hover{
+    color:#3688fa;
+    text-decoration: underline;
+}

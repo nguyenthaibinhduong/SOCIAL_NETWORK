@@ -1,0 +1,147 @@
+@media (min-width: 1025px) {
+  .chat-container{
+    width: calc(100vw - 360px);
+  }
+  .chat-nav{
+    width: 300px;
+  }
+  .chat-nav-content{
+    height: calc(100% - 120px);
+    
+  }
+}
+
+@media (min-width:801px) and (max-width: 1024px) {
+  .chat-container{
+    width: calc(100vw - 125px);
+  }
+  .chat-nav{
+    width: 75px;
+  }
+  .chat-nav-content{
+    height: 90%;
+  }
+  .chat-nav-title{
+    display: none;
+  }
+  .friend-link span{
+    display: none;
+  }
+  .friend-link{
+    justify-content: center;
+  }
+  .chat-nav-content{
+    height: calc(100% - 20px);
+    
+  }
+}
+
+@media (max-width: 800px) {
+  .chat-container{
+    width: calc(100vw - 125px);
+  }
+  .chat-nav{
+    width: 75px;
+    
+  }
+  .chat-nav-content{
+    height: calc(100% - 20px);
+    
+  }
+  .chat-nav-title{
+    display: none;
+  }
+  .friend-link span{
+    display: none;
+  }
+}
+.chat-container{
+    position: fixed;
+    background-color: #fff;
+    top:70px;
+    right: 20px;
+    
+    height: calc(100vh - 90px);
+}
+.chat-nav{
+    position: fixed;
+    background-color: #fff;
+    top:70px;
+    
+    height: calc(100vh - 90px);
+    left: 20px;
+    
+}
+.chat-nav-title{
+    height: 50px;
+}
+.chat-title{
+    height: 60px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.chat-content{
+    height: calc(100% - 120px);
+    overflow-y: scroll;
+    background-color: #f8f8fb;
+}
+.chat-nav-content{
+    height:calc(100% - 70px);
+    width: 100%;
+    overflow-y: scroll;
+}
+.chat-input{
+    height: 60px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top: 1px solid #ccc;
+}
+.chat-input::-webkit-scrollbar,
+.chat-content::-webkit-scrollbar,
+.chat-nav-content::-webkit-scrollbar {
+  width: 8px;
+  
+}
+.chat-input::-webkit-scrollbar,
+.chat-content:hover::-webkit-scrollbar,
+.chat-nav-content:hover::-webkit-scrollbar {
+  width: 8px;
+}
+.chat-input::-webkit-scrollbar-track,
+.chat-content:hover::-webkit-scrollbar-track,
+.chat-nav-content:hover::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+.chat-input::-webkit-scrollbar-thumb,
+.chat-content::-webkit-scrollbar-thumb,
+.chat-nav-content::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  
+}
+.chat-input::-webkit-scrollbar-thumb,
+.chat-content:hover::-webkit-scrollbar-thumb,
+.chat-nav-content:hover::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #ccc; 
+}
+.chat-input::-webkit-scrollbar-thumb:hover,
+.chat-content::-webkit-scrollbar-thumb:hover,
+.chat-nav-content::-webkit-scrollbar-thumb:hover {
+  background: #ccc; 
+}
+.chat-input{
+  padding-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none; /* Loại bỏ đường viền khi focus */
+  transition: border-color 0.3s ease-in-out;
+  height: 40px; /* Chỉnh chiều cao tổng thể */
+  overflow: hidden; 
+}
+
+.chat-input:focus{
+  border-radius: 20px;
+  overflow: auto;
+  background-color: #fff;
+}

@@ -1,0 +1,4 @@
+.chat-card,
+.friend-card{
+ min-height: 38vh;
+}

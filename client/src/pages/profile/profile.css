@@ -1,0 +1,32 @@
+.images{
+    position: relative;
+    height: 300px;
+
+}
+.cover-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding: 0;
+}
+.profile-img{
+    position: absolute;
+    width: 220px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+    z-index: 1;
+}
+.profile-info{
+    background-color: #fff;
+    padding-bottom:20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.center-profile{
+    padding-top:100px;
+}

@@ -1,0 +1,14 @@
+.share-input:hover,
+.share-input:focus,
+.share-input{
+    background-color: #fff;
+    border: none;
+    box-shadow: 1px #fff;
+}
+.share-button{
+    border-top: 1px solid #ccc;
+}
+.share-button-focus{
+    border-top: 1px solid #000;
+}
+
