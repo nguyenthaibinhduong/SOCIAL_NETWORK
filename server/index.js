@@ -112,4 +112,4 @@ app.get("*", (req, res) => {
 	res.send("<h1>Hello World API<h1>");
 });
 
-server.listen();
+server.listen(process.env.PORT||8008);
