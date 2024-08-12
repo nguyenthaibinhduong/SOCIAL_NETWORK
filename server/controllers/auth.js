@@ -153,6 +153,8 @@ exports.login = (req, res) => {
 
             res.cookie("access_token", access_token, {
                 httpOnly: true,
+               secure: process.env.NODE_ENV === 'production', // Đảm bảo chỉ gửi cookie qua HTTPS trong môi trường sản xuất
+                sameSite: 'Strict', // Ngăn chặn CSRF
             }).status(200).json({ ...others, refresh_token });
         });
     });
@@ -172,6 +174,8 @@ exports.refreshToken = (req, res) => {
             const access_token = jwt.sign({ id: data.id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: process.env.ACCESS_TOKEN_EXPIRES_IN });
             res.cookie("access_token", access_token, {
                 httpOnly: true,
+               secure: process.env.NODE_ENV === 'production', // Đảm bảo chỉ gửi cookie qua HTTPS trong môi trường sản xuất
+                sameSite: 'Strict', // Ngăn chặn CSRF
             }).status(200).json({ access_token });
         });
     });
@@ -255,9 +259,13 @@ exports.ConfirmPasswordRequest = (req, res) => {
         if (!isTokenValid) return res.status(400).json('Invalid token');
         res.cookie("isVerified",true, {
                 httpOnly: true,
+               secure: process.env.NODE_ENV === 'production', // Đảm bảo chỉ gửi cookie qua HTTPS trong môi trường sản xuất
+                sameSite: 'Strict', // Ngăn chặn CSRF
         });
         res.cookie("email",email, {
                 httpOnly: true,
+               secure: process.env.NODE_ENV === 'production', // Đảm bảo chỉ gửi cookie qua HTTPS trong môi trường sản xuất
+                sameSite: 'Strict', // Ngăn chặn CSRF
         });
         res.status(200).json('Token verified successfully' );
     });
