@@ -15,7 +15,7 @@ makeRequest.interceptors.response.use(
   },
   async (error) => {
     const originalConfig = error.config;
-    if (error.response && (error.response.status === 403 || error.response.status === 401) ) {// Nếu access_token hết hạn 
+    if (error.response && (error.response.status === 403) ) {// Nếu access_token hết hạn 
       try {
         const result = await makeRequest.post('auth/refresh-token', {
           refresh_token: localStorage.getItem('refresh_token') // Gọi API refresh_token
