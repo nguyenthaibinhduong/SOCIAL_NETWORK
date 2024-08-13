@@ -25,7 +25,10 @@ app.use((req, res, next) => {
 });
 app.use(Express.json());
 app.use(cors({
-    origin: process.env.APP_ORIGIN_URL
+	origin: process.env.APP_ORIGIN_URL,//
+	credentials: true,
+        methods: ['GET', 'POST', 'PUT', 'DELETE']
+	
 }))
 app.use(cookieParser());
 // Cấu hình session middleware
@@ -35,6 +38,7 @@ const server = http.createServer(app); // Tạo server HTTP từ express
 const io = new Server(server, {
     cors: {
         origin: process.env.APP_ORIGIN_URL,//
+	credentials: true,
         methods: ['GET', 'POST'],
     },
 });
