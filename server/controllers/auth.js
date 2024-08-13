@@ -152,7 +152,6 @@ exports.login = (req, res) => {
             const { password, ...others } = data[0];
 
             res.cookie("access_token", access_token, {
-                httpOnly: true,
                secure: process.env.NODE_ENV === 'production', // Đảm bảo chỉ gửi cookie qua HTTPS trong môi trường sản xuất
                 sameSite: 'Strict', // Ngăn chặn CSRF
             }).status(200).json({ ...others, refresh_token });
