@@ -6,7 +6,7 @@ exports.getPost = (req, res) => {
     const user_id = req.query.user_id;
     const token = req.cookies.access_token;
     if (!token) { 
-        return res.status(401).json(req.cookies);
+        return res.status(401).json(req.cookie);
     }
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, data) => { 
         if (err) return res.status(403).json('Invalid Token');
