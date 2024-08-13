@@ -154,7 +154,7 @@ exports.login = (req, res) => {
             res.cookie("access_token", access_token, {
                httpOnly: true,
                secure: true, // Đảm bảo chỉ gửi cookie qua HTTPS trong môi trường sản xuất
-                sameSite: 'Strict', // Ngăn chặn CSRF
+                sameSite:'None', // Ngăn chặn CSRF
             }).status(200).json({ ...others, refresh_token });
         });
     });
@@ -175,7 +175,7 @@ exports.refreshToken = (req, res) => {
             res.cookie("access_token", access_token, {
                  httpOnly: true,
                secure: true, // Đảm bảo chỉ gửi cookie qua HTTPS trong môi trường sản xuất
-                sameSite: 'Strict', // Ngăn chặn CSRF
+                sameSite:'None', // Ngăn chặn CSRF
             }).status(200).json({ access_token });
         });
     });
@@ -260,12 +260,12 @@ exports.ConfirmPasswordRequest = (req, res) => {
         res.cookie("isVerified",true, {
                 httpOnly: true,
                secure: true, // Đảm bảo chỉ gửi cookie qua HTTPS trong môi trường sản xuất
-                sameSite: 'Strict', // Ngăn chặn CSRF
+                sameSite:'None', // Ngăn chặn CSRF
         });
         res.cookie("email",email, {
                 httpOnly: true,
                secure: true, // Đảm bảo chỉ gửi cookie qua HTTPS trong môi trường sản xuất
-                sameSite: 'Strict', // Ngăn chặn CSRF
+                sameSite:'None', // Ngăn chặn CSRF
         });
         res.status(200).json('Token verified successfully' );
     });
