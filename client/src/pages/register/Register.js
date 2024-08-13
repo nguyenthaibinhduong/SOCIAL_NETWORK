@@ -26,7 +26,8 @@ function Register() {
 			navigate("/confirm_email/verify");
 		} catch (error) {
 			//console.error(error);
-           setErrors(error.response.data);
+		setLoading(true);
+           	setErrors(error.response.data);
         }
 	}
 	
