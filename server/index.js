@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var multer = require('multer')
 const { Server } = require('socket.io');
 const session = require('express-session');
-
+const http = require('http');
 // Routes
 var userRoutes = require('./routes/users');
 var postRoutes = require('./routes/posts');
