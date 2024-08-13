@@ -20,6 +20,7 @@ function ResetPassword() {
 			 sessionStorage.setItem("email", email);
 			navigate(`/confirm_email/reset`);
 		} catch (error) {
+			setLoading(true);
 			setErrors(error.response.data);
 		}
         
