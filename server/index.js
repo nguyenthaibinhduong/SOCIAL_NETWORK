@@ -4,7 +4,6 @@ require('dotenv').config();
 var cors = require('cors');
 var cookieParser = require('cookie-parser');
 var multer = require('multer')
-const http = require('http');
 const { Server } = require('socket.io');
 const session = require('express-session');
 
@@ -30,12 +29,7 @@ app.use(cors({
 }))
 app.use(cookieParser());
 // Cấu hình session middleware
-app.use(session({
-    secret: process.env.SESSION_RECRET, // Thay bằng một chuỗi bí mật của bạn
-    resave: false, // Không lưu session nếu không có sự thay đổi nào
-    saveUninitialized: false, // Không lưu session chưa được khởi tạo
-    cookie: { maxAge: 600000 } // Thời gian sống của cookie session (đơn vị là ms, ví dụ: 10 phút = 600000 ms)
-}));
+
 //SETUP SOCKET.IO API
 const server = http.createServer(app); // Tạo server HTTP từ express
 const io = new Server(server, {
