@@ -80,7 +80,7 @@ io.on('connection', (socket) => {
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, APP_ORIGIN_URL+'/public/upload');
+    cb(null, process.env.APP_ORIGIN_URL+'/public/upload');
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + file.originalname)
